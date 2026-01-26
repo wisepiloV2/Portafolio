@@ -306,6 +306,85 @@
           ]
         }
       ]
+    },
+    {
+      "page": "wisepilogamesreact",
+      "data": [
+        {
+          "type": "title",
+          "level": 1,
+          "content": [
+            { "text": "WisepiloGamesReact: Remaster de WisepiloGame" }
+          ]
+        },
+        {
+          "type": "p",
+          "content": [
+            { "text": "Una colección de minijuegos desarrollados con" },
+            { "text": " React, TypeScript y Vite.", "format": "strong" },
+            { "text": " Este proyecto es una" },
+            { "text": " remasterización", "format": "strong" },
+            { "text": " y modernización de una antigua web desarrollada originalmente en" },
+            { "text": " JavaScript Vanilla", "format": "strong" },
+            { "text": ", migrada ahora a una arquitectura de componentes moderna, escalable y con tipado estático." }
+          ]
+        },
+        {
+          "type": "title",
+          "level": 2,
+          "content": [
+            { "text": "Caracteristicas" }
+          ]
+        },
+        {
+          "type": "list-text",
+          "items": [
+            {
+              "type": "li",
+              "content": [
+                { "text": "Diseño por Capas basado en Features", "format": "strong" },
+                { "text": "(Feature-based Architecture). En esta estructura, la lógica de negocio no está dispersa, sino encapsulada por funcionalidad ('Feature')." }
+              ]
+            },
+            {
+              "type": "li",
+              "content": [
+                { "text": "Features:", "format": "strong"},
+                { "text": " Cada carpeta contiene diseño, hooks, services y types" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "level": 2,
+          "content": [
+            { "text": "Tecnologias" }
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+              { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" },
+              { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
+              { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" }
+          ]
+        },
+        {
+          "type": "title",
+          "level": 2,
+          "content": [
+            { "text": "Enlaces" }
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            { "type": "link", "href": "https://github.com/wisepiloV2/WisepiloGameReact.git", "content": "Repositorio" },
+            { "type": "link", "href": "https://wisepi.netlify.app/", "content": "Dónde probarlo" }
+          ]
+        }
+      ]
     }
   ]
 }

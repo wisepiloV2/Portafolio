@@ -99,7 +99,7 @@ body {
   color: var(--action-hover); 
 }
 
-@media (max-width: 650px) {
+@media (max-width: 1140px) {
   .project-card-simple,
   .project-card-simple{
     flex-direction: column; 
