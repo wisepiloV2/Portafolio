@@ -385,6 +385,193 @@
           ]
         }
       ]
+    },
+    {
+  "page": "memocast",
+  "data": [
+    {
+      "type": "title",
+      "level": 1,
+      "content": [
+        { "text": "MemoCast: Local-First Study Application" }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        { "text": "Herramienta de estudio integral que combina lectura y escucha activa. Diseñada con un enfoque local-first para garantizar máxima privacidad y operaciones sin latencia al prescindir de un servidor tradicional." }
+      ]
+    },
+    {
+      "type": "title",
+      "level": 2,
+      "content": [
+        { "text": "Arquitectura y Decisiones Técnicas" }
+      ]
+    },
+    {
+      "type": "list-text",
+      "items": [
+        {
+          "type": "li",
+          "content": [
+            { "text": "Local-First & Persistencia:", "format": "strong" },
+            { "text": " Implementación de IndexedDB mediante Dexie.js para la gestión de relaciones complejas (Categorías, Documentos, Audio Blobs) directamente en el navegador, eliminando la latencia de red." }
+          ]
+        },
+        {
+          "type": "li",
+          "content": [
+            { "text": "Procesamiento Asíncrono y UI Fluida:", "format": "strong" },
+            { "text": " Desarrollo de un sistema de colas (Task Queue) para la generación de Text-To-Speech (TTS) con Piper Web. Esto evita el bloqueo del hilo principal (main thread), manteniendo la interfaz interactiva durante el procesamiento de audio." }
+          ]
+        },
+        {
+          "type": "li",
+          "content": [
+            { "text": "Diseño Modular Escalable:", "format": "strong" },
+            { "text": " Estructura basada en un Feature-Sliced Design simplificado. Los servicios de acceso a datos se aislaron dentro de sus respectivos dominios (ej. features/audio), desacoplando la lógica de negocio para facilitar una eventual migración a una API remota." }
+          ]
+        },
+        {
+          "type": "li",
+          "content": [
+            { "text": "Portabilidad de Datos:", "format": "strong" },
+            { "text": " Creación de un módulo de importación/exportación de bases de datos y blobs de audio mediante archivos ZIP, mitigando la falta de sincronización en la nube mediante un sistema de backup manual." }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "title",
+      "level": 2,
+      "content": [
+        { "text": "Stack Tecnológico" }
+      ]
+    },
+    {
+      "type": "p",
+      "content": [
+        { "text": "React, TypeScript, Vite, Dexie.js (IndexedDB), Piper TTS Web, JSZip." }
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+        { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
+        { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" }
+      ]
+    },
+    {
+      "type": "title",
+      "level": 2,
+      "content": [
+        { "text": "Enlaces" }
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        { "type": "link", "href": "https://github.com/wisepiloV2/MemoCast.git", "content": "Repositorio en GitHub" },
+        { "type": "link", "href": "https://memocast-v1.netlify.app/", "content": "Live Demo" }
+      ]
+    }
+  ]
+    },
+    {
+      "page": "googlecopy",
+      "data": [
+        {
+          "type": "title",
+          "level": 1,
+          "content": [
+            { "text": "GoogleCopy: Full Stack Search Engine Clone" }
+          ]
+        },
+        {
+          "type": "p",
+          "content": [
+            { "text": "Un clon de buscador web diseñado para establecer bases sólidas en arquitectura Full Stack y despliegue de contenedores. Actualmente sirve respuestas estructuradas mediante JSON estático, sentando la infraestructura para la futura integración de un motor de búsqueda web real." }
+          ]
+        },
+        {
+          "type": "title",
+          "level": 2,
+          "content": [
+            { "text": "Arquitectura y Decisiones Técnicas" }
+          ]
+        },
+        {
+          "type": "list-text",
+          "items": [
+            {
+              "type": "li",
+              "content": [
+                { "text": "Infraestructura Contenerizada:", "format": "strong" },
+                { "text": " Orquestación de todo el ecosistema (Frontend, API REST y Base de Datos) utilizando Docker Compose. Esto asegura un entorno de ejecución consistente y simplifica el despliegue a un solo comando, eliminando la fricción entre desarrollo y producción." }
+              ]
+            },
+            {
+              "type": "li",
+              "content": [
+                { "text": "Arquitectura Desacoplada (SPA + API REST):", "format": "strong" },
+                { "text": " Separación de responsabilidades mediante una aplicación de página única (SPA) en React que utiliza Client-Side Rendering (CSR) para consumir el backend en Spring Boot, permitiendo escalar ambos servicios de forma independiente." }
+              ]
+            },
+            {
+              "type": "li",
+              "content": [
+                { "text": "Seguridad y Gestión de CORS Dinámica:", "format": "strong" },
+                { "text": " Implementación de un sistema de sesiones en el servidor (stateful) mediante Spring Security. Se configuró una política CORS dinámica, inyectando los orígenes permitidos por variables de entorno y habilitando las credenciales (allowCredentials) para permitir el flujo seguro de cookies de sesión entre dominios cruzados en un entorno HTTP local." }
+              ]
+            },
+            {
+              "type": "li",
+              "content": [
+                { "text": "Aprovisionamiento de Base de Datos:", "format": "strong" },
+                { "text": " Automatización de la inicialización de MySQL mediante un script init.sql integrado en el ciclo de vida del contenedor, garantizando que el esquema de datos esté listo de inmediato al levantar el servicio." }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "title",
+          "level": 2,
+          "content": [
+            { "text": "Stack Tecnológico" }
+          ]
+        },
+        {
+          "type": "p",
+          "content": [
+            { "text": "Java 21, Spring Boot, Spring Security, MySQL 8.0, React, Vite, Docker, Docker Compose." }
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" },
+            { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" },
+            { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
+            { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+            { "type": "image", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" }
+          ]
+        },
+        {
+          "type": "title",
+          "level": 2,
+          "content": [
+            { "text": "Enlaces" }
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            { "type": "link", "href": "https://github.com/wisepiloV2/GoogleCopy.git", "content": "Repositorio en GitHub" }
+          ]
+        }
+      ]
     }
   ]
 }
